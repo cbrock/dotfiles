@@ -5,7 +5,7 @@ export ZSH=/Users/colinbrock/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sugar-free"
+ZSH_THEME="sugar-free/sugar-free"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
