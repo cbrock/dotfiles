@@ -82,3 +82,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ejectall="osascript -e 'tell application \"Finder\" to eject (every disk whose ejectable is true)'"
+alias nuke="rm -rf bower_components node_modules tmp dist && npm cache clean && bower cache clean && npm install && bower install"
