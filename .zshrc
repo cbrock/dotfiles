@@ -84,3 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ejectall="osascript -e 'tell application \"Finder\" to eject (every disk whose ejectable is true)'"
 alias nuke="rm -rf bower_components node_modules tmp dist && npm cache clean && bower cache clean && npm install && bower install"
+
+# Boxen (see https://github.com/boxen/our-boxen/#distributing)
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
