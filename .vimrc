@@ -52,4 +52,6 @@ if !exists("g:syntax_on")
     syntax enable
 endif
 set background=dark
+let g:solarized_termcolors = 256
 colorscheme solarized
+set backspace=indent,eol,start
