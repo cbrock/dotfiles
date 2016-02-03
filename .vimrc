@@ -55,3 +55,4 @@ set background=dark
 let g:solarized_termcolors = 256
 colorscheme solarized
 set backspace=indent,eol,start
+set number
