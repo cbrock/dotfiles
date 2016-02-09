@@ -32,6 +32,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,7 +51,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-if !exists("g:syntax_on")
+if !exists('g:syntax_on')
     syntax enable
 endif
 set background=dark
@@ -56,3 +59,14 @@ let g:solarized_termcolors = 256
 colorscheme solarized
 set backspace=indent,eol,start
 set number
+set wildmenu " turn on wild menu
+set wildmode=list:longest " turn on wild menu in special format (long format)
+set mouse=a " use mouse everywhere
+
+" indent related
+set ai " autoindent (filetype indenting instead)
+set nosi " smartindent (filetype indenting instead)
+
+" vim-airline settings
+set laststatus=2
+let g:airline_theme='solarized'
