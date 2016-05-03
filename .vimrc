@@ -58,6 +58,7 @@ endif
 set background=dark
 let g:solarized_termcolors = 256
 colorscheme solarized
+set clipboard=unnamed
 set backspace=indent,eol,start
 set number
 set wildmenu " turn on wild menu
