@@ -73,7 +73,7 @@ set nosi " smartindent (filetype indenting instead)
 
 " vim-airline settings
 set laststatus=2
-let g:airline_theme='solarized'
+let g:airline_theme='bubblegum'
 
 " switch modes easier
 :imap jk <Esc>
