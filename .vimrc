@@ -62,6 +62,7 @@ colorscheme solarized
 set clipboard=unnamed
 set backspace=indent,eol,start
 set number
+set relativenumber
 set wildmenu " turn on wild menu
 set wildmode=list:longest " turn on wild menu in special format (long format)
 set mouse=a " use mouse everywhere
