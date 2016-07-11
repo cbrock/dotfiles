@@ -67,6 +67,9 @@ set wildmenu " turn on wild menu
 set wildmode=list:longest " turn on wild menu in special format (long format)
 set mouse=a " use mouse everywhere
 
+" Trigger autoread when changing buffers or coming back to vim.
+au FocusGained,BufEnter * :silent! !
+
 " indent related
 set ai " autoindent (filetype indenting instead)
 set nosi " smartindent (filetype indenting instead)
