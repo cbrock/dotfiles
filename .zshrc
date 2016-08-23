@@ -49,7 +49,7 @@ ZSH_THEME="sugar-free/sugar-free"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx brew git npm sublime)
+plugins=(osx brew git sublime)
 
 # User configuration
 
