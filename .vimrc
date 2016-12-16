@@ -82,6 +82,8 @@ let g:airline_theme='bubblegum'
 
 " switch modes easier
 :imap jk <Esc>
+" add new line with <Enter>
+map <Enter> o<ESC>
 
 " ctrlp file/dir exclusions
 let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules|tmp)|(\.(swp|ico|git|svn))$'
