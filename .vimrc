@@ -39,6 +39,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wincent/ferret'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'neomake/neomake'
+Plugin 'dojoteef/neomake-autolint'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
