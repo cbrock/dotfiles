@@ -31,9 +31,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -41,6 +39,7 @@ Plugin 'wincent/ferret'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'neomake/neomake'
 Plugin 'dojoteef/neomake-autolint'
+Plugin 'jacoborus/tender.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,12 +56,17 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-if !exists('g:syntax_on')
-    syntax enable
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+  set termguicolors
 endif
+
+if !exists('g:syntax_on')
+  syntax enable
+endif
+
 set background=dark
-let g:solarized_termcolors = 256
-colorscheme solarized
+colorscheme tender
 set clipboard=unnamed
 set backspace=indent,eol,start
 set number
@@ -80,7 +84,7 @@ set nosi " smartindent (filetype indenting instead)
 
 " vim-airline settings
 set laststatus=2
-let g:airline_theme='bubblegum'
+let g:airline_theme='tender'
 
 " switch modes easier
 :imap jk <Esc>
