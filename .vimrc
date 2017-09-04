@@ -74,6 +74,8 @@ set relativenumber
 set wildmenu " turn on wild menu
 set wildmode=list:longest " turn on wild menu in special format (long format)
 set mouse=a " use mouse everywhere
+noremap <Space> :
+let mapleader = ","
 
 " Trigger autoread when changing buffers or coming back to vim.
 au FocusGained,BufEnter * :silent! !
