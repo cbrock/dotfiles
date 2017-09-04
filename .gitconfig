@@ -38,5 +38,8 @@ helper = /opt/boxen/bin/boxen-git-credential
 [core]
 excludesfile = /opt/boxen/config/git/gitignore
 
+[status]
+showUntrackedFiles = all
+
 [alias]
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
