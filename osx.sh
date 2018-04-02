@@ -73,6 +73,8 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false;
 echo "Disable smart dashes as they’re annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false;
 
+echo "Disable shake to magnify cursor"
+defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
 
 ###############################################################################
 # "Trackpad, mouse, keyboard, Bluetooth accessories, and input"
