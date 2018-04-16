@@ -96,3 +96,6 @@ export EDITOR='vim'
 
 # https://github.com/nodenv/nodenv#homebrew-on-mac-os-x
 eval "$(nodenv init -)"
+
+# specifically for nw binary from  https://github.com/cbrock/dotfiles
+export PATH=~/bin/:$PATH
