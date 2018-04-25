@@ -76,6 +76,11 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false;
 echo "Disable shake to magnify cursor"
 defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
 
+# Required for iterm2 session restoration
+# See https://www.iterm2.com/documentation-restoration.html
+echo "Don't close windows when quitting an app"
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
+
 ###############################################################################
 # "Trackpad, mouse, keyboard, Bluetooth accessories, and input"
 ###############################################################################
