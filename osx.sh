@@ -76,6 +76,9 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false;
 echo "Disable shake to magnify cursor"
 defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
 
+# Disable automatic period insertion on double-space
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+
 # Required for iterm2 session restoration
 # See https://www.iterm2.com/documentation-restoration.html
 echo "Don't close windows when quitting an app"
