@@ -1,19 +1,25 @@
 {
   "telemetry.enableTelemetry": false,
-
   "workbench.colorTheme": "Zenburn",
-
   "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
-      "after": ["<esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<esc>"
+      ]
     }
   ],
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["leader", "w"],
+      "before": [
+        "leader",
+        "w"
+      ],
       "after": [],
       "commands": [
         {
@@ -21,19 +27,45 @@
           "args": []
         }
       ]
+    },
+    {
+      "before": [
+        "<enter>"
+      ],
+      "after": [
+        "o",
+        "<esc>"
+      ]
     }
   ],
-
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "editor.minimap.enabled": false,
   "editor.rulers": [
     80
   ],
-
+  "editor.wordWrap":"on",
   "files.exclude": {
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "tmp": true
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "tmp": true
+  },
+  "window.zoomLevel": 0,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.statusBar.feedback.visible": false,
+  "search.location": "panel",
+  "terminal.integrated.rendererType": "dom",
+  "files.useExperimentalFileWatcher": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "telemetry.enableCrashReporter": false,
+  "search.exclude": {
+    "**/tmp": true
+  },
+  "files.watcherExclude": {
+    "**/tmp/**": true
   }
 }
+
