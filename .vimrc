@@ -40,8 +40,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'neomake/neomake'
-Plugin 'dojoteef/neomake-autolint'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tpope/vim-surround'
 
@@ -99,23 +97,8 @@ map <Enter> o<ESC>
 " ctrlp file/dir exclusions
 let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules|tmp)|(\.(swp|ico|git|svn))$'
 
-let g:neomake_open_list = 2
-let g:neomake_autolint_events = {
-  \ 'InsertLeave': {'delay': 0},
-  \ 'TextChanged': {},
-  \ }
-
-let g:neomake_javascript_jshint_maker = {
-    \ 'args': ['--config', './.jshintrc'],
-    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
-    \ }
-let g:neomake_javascript_enabled_makers = ['jshint']
-
-let g:neomake_ruby_rubocop_maker = {
-    \ 'args': ['--config', './.rubocop'],
-    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
-    \ }
-let g:neomake_ruby_enabled_makers = ['rubocop']
+" ensure editorconfig-vim is compatible with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 
 noremap <Leader>f :Files<CR>
 
