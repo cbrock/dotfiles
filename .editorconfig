@@ -1,0 +1,15 @@
+# EditorConfig is awesome: https://EditorConfig.org
+#
+# Note: editorconfig-vim does not support a symlink'ed .editorconfig
+# in your ~/ directory, so this file must be manually copied there
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
