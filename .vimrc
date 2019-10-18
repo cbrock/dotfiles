@@ -42,6 +42,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
