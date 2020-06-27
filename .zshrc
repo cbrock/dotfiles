@@ -99,3 +99,7 @@ eval "$(nodenv init -)"
 
 # specifically for nw binary from  https://github.com/cbrock/dotfiles
 export PATH=~/bin/:$PATH
+
+# Go via homebrew
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
