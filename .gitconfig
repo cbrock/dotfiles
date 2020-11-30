@@ -2,7 +2,7 @@
     default = simple
 [user]
     name = cbrock
-    email = colintbrock@gmail.com
+    email = colin.brock@lytics.com
 [color]
 # ui = true is a superset of all the more specific color options
 #  as documented at http://book.git-scm.com/5_customizing_git.html
@@ -36,3 +36,7 @@ showUntrackedFiles = all
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 stash-all = stash save --include-untracked
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[commit]
+	verbose = true

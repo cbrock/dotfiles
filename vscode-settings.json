@@ -74,11 +74,15 @@
   },
   "[javascript]": {
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[less]": {
     "editor.formatOnSave": true,
   },
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

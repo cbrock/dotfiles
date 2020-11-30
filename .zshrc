@@ -93,6 +93,9 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias nuke="rm -rf node_modules tmp dist bower_components && yarn && bower cache clean && bower install"
+alias cat="bat"
+alias 🦇="bat"
 
 # https://github.com/nodenv/nodenv#homebrew-on-mac-os-x
 eval "$(nodenv init -)"
@@ -103,3 +106,59 @@ export PATH=~/bin/:$PATH
 # Go via homebrew
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+# =======
+# https://github.com/antonmedv/fx/blob/master/DOCS.md#using-fxrc
+export NODE_PATH=`npm root -g`
+export VOLTA_HOME="/Users/colinbrock/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# via `brew cask info google-cloud-sdk`
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+# https://sourabhbajaj.com/mac-setup/Go/README.html
+# export GOPATH=$HOME/dev
+# export GOROOT=/usr/local/opt/go/libexec
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin
+
+# https://github.com/lytics/lio/blob/develop/docs/onboarding.md
+export LIOHM="${HOME}/go/src/github.com/lytics/lio"
+export GOPATH="${HOME}/go"
+export PATH="${PATH}:/usr/local/go/bin:${GOPATH//://bin:}/bin"
+alias gta="go test -p 1 ./... 2>&1 | grep -a -v 'no test'"
+alias gtar="go test -p 1 -race ./... 2>&1 | grep -a -v 'no test'"
+alias liostart="cd $LIOHM/devops/docker/lioenv; docker-compose start"
+alias lioapistart="go run $GOPATH/src/github.com/lytics/lio/src/cmd/liod/liod.go api --config=\"$LIOHM/config/lio.conf\" --colorize"
+
+export BIGTABLE_EMULATOR_HOST=localhost:8600
+export PUBSUB_EMULATOR_HOST=localhost:8500
+export LOCALGCS=/tmp/localgcs
+
+# convenience wrappers for lioenv
+docker-compose () {
+    docker run -it \
+        -v /var/run/docker.sock:/var/run/docker.sock \
+        -v "$PWD:$PWD" \
+        -w "$PWD" \
+        gcr.io/lyticsstaging/docker-compose \
+        "$@"
+}
+lioenvup () {
+    pushd "$LIOHM/devops/docker/lioenv/"
+    docker network inspect cloudbuild &>/dev/null || docker network create cloudbuild
+    awk '/image/{print $2}' docker-compose.yml | xargs -n 1 docker pull
+    docker-compose up -d &&
+    sleep 10 &&
+    go run $LIOHM/src/cmd/testtools/envboot/main.go
+    popd
+}
+lioenvdown () {
+    pushd "$LIOHM/devops/docker/lioenv/"
+    docker-compose down &&
+    docker-compose rm
+    popd
+}
+
+# via `brew install mongodb-community@3.6`
+export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
